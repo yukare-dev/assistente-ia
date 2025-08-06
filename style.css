@@ -96,12 +96,20 @@ button {
   flex-direction: column;
   background: rgba(54, 88, 193, 0.25);
   border-radius: 8px;
+  font-size: 16px;
 }
 
 footer {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
   box-shadow: 0px -2px 3px #819a9144;
-  padding: 20px;
+  padding: 18px;
+}
+
+@media (max-width: 780px) {
+  main {
+    width: 100%;
+    height: fit-content;
+  }
 }
