@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Assistente de IA</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assistente de IA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="/assets/img/chatbot.png"
+        alt="Imagem ilustrativa de um Chat bot"
+      />
+      <h1>Assistente de IA</h1>
+    </header>
+    <main>
+      <section class="secao-apikey">
+        <label for="apiKey">API Key:</label>
+        <input
+          type="password"
+          id="apiKey"
+          placeholder="Cole sua API Key aqui"
+        />
+      </section>
+      <section class="secao-pergunta">
+        <form id="formPergunta">
+          <label for="pergunta">Faça a sua pergunta:</label>
+          <textarea
+            id="pergunta"
+            rows="4"
+            placeholder="Digite sua pergunta aqui..."
+          ></textarea>
+          <button type="submit">Perguntar</button>
+        </form>
+      </section>
+      <section class="secao-resposta">
+        <h2>Resposta:</h2>
+        <p id="resposta">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+          voluptatum impedit incidunt a dolore quo placeat pariatur quas unde
+          dignissimos libero nesciunt, alias fugit amet accusantium neque?
+          Tempore, numquam dolores?
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Desenvolvido por Stephanny Yukare, Isabelle Vitória Santiago Mendonça,
+        João Pedro Miranda Suzart, Robson Oliveira Gomes Junior, Caroliny
+        Gonçalves Peixoto – 2025
+      </p>
+    </footer>
 
-  <header>
-    <h1>Assistente de IA</h1>
-  </header>
-
-  <section class="secao-apikey">
-    <label for="apiKey">API Key:</label>
-    <input type="password" id="apiKey" placeholder="Cole sua API Key aqui">
-  </section>
-
-  <section class="secao-pergunta">
-    <form id="formPergunta">
-      <label for="pergunta">Sua pergunta:</label>
-      <textarea id="pergunta" rows="4" placeholder="Digite sua pergunta aqui..."></textarea>
-      <button type="submit">Perguntar</button>
-    </form>
-  </section>
-
-  <section class="secao-resposta">
-    <h2>Resposta:</h2>
-    <p id="resposta"></p>
-  </section>
-
-  <footer>
-    <p>Desenvolvido por Stephanny Yukare, Isabelle Vitória Santiago Mendonça, João Pedro Miranda Suzart, Robson Oliveira Gomes Junior, Caroliny Gonçalves Peixoto – 2025</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
