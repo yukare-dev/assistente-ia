@@ -99,6 +99,20 @@ button {
   font-size: 16px;
 }
 
+#copiarResposta {
+  background-color: #3658c1; /* verde */
+  border: #3658c1 2px solid;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+#copiarResposta.copiado {
+  background-color: #3658c1; /* verde mais claro */
+}
+
 footer {
   text-align: center;
   font-size: 14px;
