@@ -29,19 +29,16 @@ form.addEventListener("submit", async (event) => {
   try {
     // Faz a requisição para a API Gemini (compatível com OpenAI)
     const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "models/chat-bison-001", // modelo do Gemini
-          messages: [
+          contents: [
             {
-              role: "user",
-              content: pergunta,
+              parts: [{ text: pergunta }],
             },
           ],
         }),
@@ -58,7 +55,8 @@ form.addEventListener("submit", async (event) => {
 
     // A resposta do Gemini vem em data.choices[0].message.content
     const respostaIA =
-      data.choices?.[0]?.message?.content || "Resposta não encontrada.";
+      data.candidates?.[0]?.content?.parts?.[0]?.text ||
+      "Resposta não encontrada.";
 
     pResposta.textContent = respostaIA;
   } catch (error) {
