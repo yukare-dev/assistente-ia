@@ -84,3 +84,21 @@ btnLimpar.addEventListener("click", () => {
   secaoResposta.classList.add("hidden");
   textareaPergunta.value = "";
 });
+
+// Salvar ApiKey no localStorage
+
+const storageApiKey = "apiKeyValue";
+
+inputApiKey.addEventListener("input", () => {
+  localStorage.setItem(storageApiKey, inputApiKey.value);
+});
+
+function loadApiKeyFromStorage() {
+  const savedApiKey = localStorage.getItem(storageApiKey);
+
+  if (savedApiKey) {
+    inputApiKey.value = savedApiKey;
+  }
+}
+
+loadApiKeyFromStorage();
